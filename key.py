@@ -13,12 +13,12 @@ import string
 
 with open("passwords.json", 'r') as file:
 	'''
-	If json file successfully loads and is of type dictionary,
+	If json file successfully loads,
 	It will be stored in raw_credentials.
 	Else, raw_credentials will be initialized to an empty dictionary.
 	'''
 	try:
-		raw_credentials = json.load(file) if type(json.load(file)) is dict else {}
+		raw_credentials = json.load(file)
 	except:
 		raw_credentials = {}
 
